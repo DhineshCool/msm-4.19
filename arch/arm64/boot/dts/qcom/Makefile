@@ -12,6 +12,10 @@ ifeq ($(CONFIG_PAYTON_DTB),y)
 dtb-$(CONFIG_ARCH_SDM630) += sdm630-payton-p2b.dtb
 endif
 
+ifeq ($(CONFIG_EVERT_DTB),y)
+dtb-$(CONFIG_ARCH_SDM630) += sdm630-evert-evt1.dtb
+endif
+
 always		:= $(dtb-y)
 subdir-y	:= $(dts-dirs)
 clean-files    := *.dtb *.dtbo
